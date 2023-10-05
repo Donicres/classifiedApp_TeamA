@@ -1,26 +1,31 @@
 const {Router} = require('express')
 const router = Router() 
-// const db = require("../config/db")
+const db = require("../config/db")
 
 
 
-router.post('/create ', (req, res) => {
+router.post('/create', async(req, res) => {
     
-});
+}); //GOLDEN
 
-router.get('/product/:productID ', (req, res) => {
+router.get('/product', async(req, res) => {
   
-});
+}); //YVETTE
 
-
-router.put('/update/:productID ', (req, res) => {
+router.get('/product/:productID ', async(req, res) => {
   
-});
+}); //VIVIAN
 
 
-router.delete('/delete/:productID ', (req, res) => {
+router.put('/update/:productID ', async(req, res) => {
+    let gg = req.params['productID ']
   
-});
+}); //BAUDWIN
+
+
+router.delete('/delete/:productID ', async(req, res) => {
+  
+}); //DONADONI
 
 
 

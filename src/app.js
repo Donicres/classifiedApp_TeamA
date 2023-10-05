@@ -7,8 +7,6 @@ const category = require("./routes/category")
 const comments = require("./routes/comments")
 const contact = require("./routes/contact")
 
-
-
 const port = 5000;
 
 app.use(express.json)
@@ -28,6 +26,32 @@ app.use("/api/contact",contact)
   })
 
 
+//  app.get("/", async(req,res)=>{
+
+//   const mysqlquery = `SELECT * FROM users`
+//   try {
+//     const result = await db.query(mysqlquery)
+//     res.send(result)  
+//   } catch (error) {
+//     res.send(error)
+//   }
+
+//  })
+
+
+// app.post("/", async(req,res)=>{
+
+//   const mysqlquery = `INSERT INTO users(username, password)
+//   VALUES(?,?)`
+//   const {username,password} = req.body
+//   const newUser = [username, password]
+//   try {
+//      await db.query(mysqlquery, newUser) 
+//   } catch (error) {
+//     res.send(error)
+//   }
  
+
+//  })
  
 
