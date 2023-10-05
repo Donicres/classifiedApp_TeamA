@@ -18,7 +18,7 @@ router.get('/product/:productID ', async(req, res) => {
 
 
 router.put('/update/:productID ', async(req, res) => {
-    let gg = req.params['productID ']
+
   
 }); //BAUDWIN
 
