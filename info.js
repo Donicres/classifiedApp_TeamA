@@ -113,6 +113,7 @@
 // id int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT
 // username varchar(50) NOT NULL UNIQUE,
 // email varchar(50) NOT NULL UNIQUE,
+// phonenumber VARCHAR(200) NOT NULL UNIQUE,
 // passwd varchar(50) NOT NULL,
 // created_on datetime,
 // updated_on datetime
@@ -140,6 +141,19 @@
 // );
 
 
+// CREATE TABLE Comment(
+// id int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT
+// userid int NOT NULL,
+// productid int NOT NULL,
+// cmessage varchar(250) NOT NULL UNIQUE,
+// created_on datetime,
+// updated_on datetime,
+// FOREIGN KEY(userid) REFERENCES User(id),
+// FOREIGN KEY(productid) REFERENCES Products(id)
+
+// );
+
+
 // CREATE TABLE Contact(
 // id int NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT
 // userid int NOT NULL,
@@ -147,9 +161,7 @@
 // cmessage varchar(250) NOT NULL UNIQUE,
 // created_on datetime,
 // updated_on datetime,
-// FOREIGN KEY(userid) REFERENCES User(id)
-// ,
+// FOREIGN KEY(userid) REFERENCES User(id),
 // FOREIGN KEY(productid) REFERENCES Products(id)
 
 // );
-
