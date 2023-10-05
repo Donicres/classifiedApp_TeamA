@@ -11,5 +11,4 @@ const db = mysql.createPool({
   }).promise()
   
 
-
    module.exports = db
