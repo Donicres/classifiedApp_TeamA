@@ -8,7 +8,7 @@ const db = mysql.createPool({
     database: "ClassifiedApp",
     user: "root",
     password: "Michealtutu123"
-  }).promise()
+  })
   
 
 
