@@ -6,16 +6,19 @@ const products = require("./routes/products")
 const category = require("./routes/category")
 const comments = require("./routes/comments")
 const contact = require("./routes/contact")
-
 const port = 5000;
 
-app.use(express.json)
+
+
+
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use("/api/users",users)
 app.use("/api/products",products)
 app.use("/api/category",category)
 app.use("/api/comment",comments)
 app.use("/api/contact",contact)
+
 
 
 
