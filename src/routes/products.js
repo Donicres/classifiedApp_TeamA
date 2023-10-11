@@ -35,7 +35,14 @@ router.post('/create', async (request, respond) => {
 
 });//GOLDEN
 
-router.get("/product", async (req, res) => {
+router.get("/allProduct", async (req, res) => {
+    try {
+        const findClient = req.body.q
+        const myquery = await queryPromise(`SELECT * FROM Products`)
+        res.json(myquery)
+      } catch (error) {
+        res.send(error)
+      }
 
 }); //YVETTE
 
@@ -70,9 +77,19 @@ router.put("/update/:productID", async (req, res) => {
 });   //BAUDWIN
 
 
-
 router.delete("/delete/:productID", async (req, res) => {
-
+    try{
+        const id = request.params.id
+        const myquery = "DELETE from Products WHERE id=?"
+        const result = await queryPromise(myquery,[id])
+        if(result.affectedRows > 0){
+            response.status(200).json({message:'User deleted successfully'})
+        }else{
+           response.status(401).json({message:'No user was deleted'}) 
+        }
+    }catch(err){
+        console.log(err)
+    }
 }); //DONADONI
 
 

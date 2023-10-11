@@ -7,7 +7,7 @@ const db = mysql.createPool({
     port: 3306,
     database: "ClassifiedApp",
     user: "root",
-    password: "Michealtutu123"
+    password: "General@123"//"Michealtutu123"
   })
   
 
